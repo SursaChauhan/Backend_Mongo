@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 const fs =require('fs');
 const User =require('./User')
-
+const cors =require('cors');
 dotenv.config();
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // -- to import the data on db --
 // fs.readFile('db.json',"utf-8",(err,data)=>{
